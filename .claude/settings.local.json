@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__claude-in-chrome__tabs_context_mcp",
+      "Bash(curl -s -A \"Mozilla/5.0\" https://www.nithinmwarrier.com/ -o /tmp/ref.html -w \"%{http_code}\\\\n\")",
+      "Read(//tmp/**)",
+      "Bash(mkdir -p /c/Users/Asus/AppData/Local/Temp/claude/C--Users-Asus-2026NAUPOR/ae70104c-d9fc-4641-813f-6a32673ffbf2/scratchpad)",
+      "Bash(curl -s -A Mozilla/5.0 https://www.nithinmwarrier.com/ -o /c/Users/Asus/AppData/Local/Temp/claude/C--Users-Asus-2026NAUPOR/ae70104c-d9fc-4641-813f-6a32673ffbf2/scratchpad/ref.html -w '%{http_code}\\\\n')",
+      "Read(//c/Users/Asus/AppData/Local/Temp/claude/C--Users-Asus-2026NAUPOR/ae70104c-d9fc-4641-813f-6a32673ffbf2/scratchpad/**)",
+      "Bash(SCRATCH=\"/c/Users/Asus/AppData/Local/Temp/claude/C--Users-Asus-2026NAUPOR/ae70104c-d9fc-4641-813f-6a32673ffbf2/scratchpad\" *)",
+      "Bash(curl -s -A Mozilla/5.0 https://www.nithinmwarrier.com/_next/static/chunks/0p4p4p6uzbhjn.css -o /c/Users/Asus/AppData/Local/Temp/claude/C--Users-Asus-2026NAUPOR/ae70104c-d9fc-4641-813f-6a32673ffbf2/scratchpad/ref.css -w '%{http_code}\\\\n')",
+      "Bash(grep -oE '#[0-9a-fA-F]{3,8}' /c/Users/Asus/AppData/Local/Temp/claude/C--Users-Asus-2026NAUPOR/ae70104c-d9fc-4641-813f-6a32673ffbf2/scratchpad/ref.css)"
+    ]
+  }
+}
