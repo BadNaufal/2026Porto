@@ -423,6 +423,33 @@ body {
   animation: cta-pulse 2.4s ease-out infinite;
 }
 
+/* Manila-folder work cards: the project image is a "document" sitting
+   inside the folder — visible at the top even at rest, sliding up and out
+   when the folder is hovered, while the folder front tips open slightly. */
+.folder-body {
+  perspective: 1000px;
+}
+
+.folder-paper {
+  transform: translateY(6%);
+  transition: transform 0.55s var(--ease-punch);
+}
+
+.folder:hover .folder-paper,
+.folder:focus-visible .folder-paper {
+  transform: translateY(-22%) rotate(-2deg);
+}
+
+.folder-front {
+  transform-origin: bottom center;
+  transition: transform 0.55s var(--ease-smooth);
+}
+
+.folder:hover .folder-front,
+.folder:focus-visible .folder-front {
+  transform: rotateX(7deg);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

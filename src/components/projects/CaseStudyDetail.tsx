@@ -66,6 +66,52 @@ export function CaseStudyDetail({ caseStudy }: CaseStudyDetailProps) {
         )}
       </div>
 
+      {/* Brief → Approach → Outcome: the "here's the problem, here's what I
+          did, here's the result" a creative director actually evaluates. */}
+      <div
+        className="relative grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 pb-14"
+        style={{ paddingLeft: "var(--frame-inset)", paddingRight: "var(--frame-inset)" }}
+      >
+        {(
+          [
+            ["The brief", caseStudy.story.brief],
+            ["The approach", caseStudy.story.approach],
+            ["The outcome", caseStudy.story.outcome],
+          ] as const
+        ).map(([label, text], i) => (
+          <div
+            key={label}
+            data-reveal
+            style={{ "--reveal-delay": `${i * 100}ms` } as React.CSSProperties}
+            className="flex flex-col gap-3 border-t-2 border-line pt-5"
+          >
+            <span className="text-[11px] uppercase tracking-[0.12em] font-bold text-accent">
+              0{i + 1} — {label}
+            </span>
+            <p className={`leading-relaxed ${i === 2 ? "text-fg font-medium" : "text-fg-soft"}`}>
+              {text}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      <div
+        className="relative flex flex-wrap items-center gap-2 pb-14"
+        style={{ paddingLeft: "var(--frame-inset)", paddingRight: "var(--frame-inset)" }}
+      >
+        <span className="text-[11px] uppercase tracking-[0.12em] font-bold text-fg-faint mr-2">
+          Delivered
+        </span>
+        {caseStudy.deliverables.map((item) => (
+          <span
+            key={item}
+            className="rounded-full border border-line px-3.5 py-1.5 text-[12px] font-bold text-fg-soft"
+          >
+            {item}
+          </span>
+        ))}
+      </div>
+
       <div
         className="relative flex flex-col gap-6 pb-24"
         style={{ paddingLeft: "var(--frame-inset)", paddingRight: "var(--frame-inset)" }}
