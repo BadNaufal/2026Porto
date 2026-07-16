@@ -73,7 +73,11 @@ export const caseStudies: CaseStudy[] = [
       "Product development",
       "Manufacturer coordination",
     ],
-    images: [],
+    images: [
+      { file: "acento.png", alt: "Acento tumbler and lunchbox brand showcase — packaging and lifestyle photography" },
+      { file: "stoval.png", alt: "Stoval cookware brand showcase — product photography and marketplace campaign creative" },
+      { file: "bozbach.png", alt: "Bozbach ringlight and tripod brand showcase — product photography and campaign creative" },
+    ],
     brandPills: [
       { name: "Acento", color: "#1f2a44" },
       { name: "Stoval", color: "#2f6b4f" },
